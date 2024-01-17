@@ -476,10 +476,10 @@ response = client.finetunes.retrieve(id: fine_tune_id)
 fine_tuned_model = response["fine_tuned_model"]
 ```
 
-This fine-tuned model name can then be used in completions:
+This fine-tuned model name can then be used in chat completions:
 
 ```ruby
-response = client.completions(
+response = client.chat(
     parameters: {
         model: fine_tuned_model,
         prompt: "I love Mondays!"
